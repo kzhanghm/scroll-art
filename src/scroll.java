@@ -9,6 +9,8 @@ public class scroll {
 
      static int heart_width = 21;
      static int heart_height = 15;
+    static final int TOTORO_HEIGHT = 16;
+    static final int TOTORO_WIDTH = 29;
 
     
     public static void main(String[] args) throws InterruptedException {
@@ -56,6 +58,12 @@ char[][] woodstock = getWoodstock();
             }
             System.out.println();
         }
+        char[][]totoro = getTotoro();
+        for (int y = 0; y < totoro.length; y++) {
+            System.out.println(new String(totoro[y]));
+        }
+        Thread.sleep(30);
+    }
         // for (int i = 0; i < heart_height; i++) {
         //     for (int j = 0; j < heart_width; j++) {
         //         System.out.print(heart[i][j] == '\0' ? ' ' : heart[i][j]);
@@ -64,7 +72,7 @@ char[][] woodstock = getWoodstock();
         //     Thread.sleep(30);
         // }
     }
-}
+
 
 
 
@@ -74,7 +82,160 @@ char[][] woodstock = getWoodstock();
 
      
  
-    
+    static char [][] getTotoro() {
+        char[][] img = new char[TOTORO_HEIGHT][TOTORO_WIDTH];
+        for (int y = 0; y < TOTORO_HEIGHT; y++){
+            for (int x = 0; x < TOTORO_WIDTH; x++) {
+                img[y][x] = ' ';
+            }
+        }
+        //individual character
+        img[0][9]  ='/';
+        img[0][10] = '\\';
+        img[0][18] = '/';
+        img[0][19] = '\\';
+        img[1][8] = '/';
+        img[1][9] = '|';
+        img[1][10] = '|';
+        img[1][11] = '\\';
+        img[1][17] = '/';
+        img[1][18] = '|';
+        img[1][19] = '|';
+        img[1][20] = '\\';
+        img[2][8] = '.';
+        img[2][9] = '.';
+        img[2][10] = '-';
+        img[2][11] = '-';
+        img[2][12] = '-';
+        img[2][13] = '-';
+        img[2][14] = '-';
+        img[2][15] = '-';
+        img[2][16] = '-';
+        img[2][17] = '-';
+        img[2][18] = '-';
+        img[2][19] = '.';
+        img[2][20] = '.';
+        img[3][6] = '.';
+        img[3][7] = '\'';
+        img[3][21] = '\'';
+        img[3][22] = '.';
+        img[4][6] = '/';
+        img[4][8] = '(';
+        img[4][9] = '*';
+        img[4][10] = ')';
+        img[4][14] = 'v';
+        img[4][18] = '(';
+        img[4][19] = '*';
+        img[4][20] = ')';
+        img[4][22] = '\\';
+        img[4][25] = '.';
+        img[4][26] = '-';
+        img[4][27] = '-';
+        img[4][28] = '.';
+        img[5][6] = '|';
+        img[5][11] = '\'';
+        img[5][12] = '_';  
+        img[5][13] = '_';
+        img[5][14] = '_';
+        img[5][15] = '_';
+        img[5][16] = '_';  
+        img[5][17] = '\'';
+        img[5][22] = '|';
+        img[5][24] = '/';
+        img[5][28] = '|';
+        img[6][7] = '\\';
+        img[6][21] = '/';
+        img[6][22] = '-';
+        img[6][23] = '\'';
+        img[6][27] = '.';
+        img[6][28] = '\'';
+        img[7][4] = '.';
+        img[7][5] = '-';
+        img[7][6] = '\'';
+        img[7][8] = '\'';
+        img[7][9] = '\'';
+        img[7][10] = '-';
+        img[7][11] = '.';
+        img[7][12] = '.';
+        img[7][13] = '-';
+        img[7][14] = '-';
+        img[7][15] = '-';
+        img[7][16] = '.';
+        img[7][17] = '.';
+        img[7][18] = '-';
+        img[7][19] = '\'';
+        img[7][21] = '\'';
+        img[7][26] = '/';
+        img[8][3] = '/';
+        img[8][9] = '.';
+        img[8][10] = '\'';
+        img[8][12] = '^';
+        img[8][14] = '^';
+        img[8][16] = '^';
+        img[8][18] = '\'';
+        img[8][19] = '.';
+        img[8][24] = '.';
+        img[8][25] = '\'';
+        img[9][2] = '/';
+        img[9][8] = '/';
+        img[9][10] ='^';
+        img[9][12] = '^';
+        img[9][14] = '^';
+        img[9][16] = '^';
+        img[9][18] = '^';
+        img[9][20] = '\\';
+        img[9][23] = '/';
+        img[10][2] = '|';
+        img[10][5] = '|';
+        img[10][7] = '|';
+        img[10][21] = '|';
+        img[10][23] = '|';
+        img[11][2] = '\'';
+        img[11][3] = '-';
+        img[11][4] = '.';
+        img[11][5] = '|';
+        img[11][7] = '|';
+        img[11][21] = '|';
+        img[11][23] = '|';
+        img[12][6] = '\\';
+        img[12][8] = '\\';
+        img[12][20] = '/';
+        img[12][22] = '/';
+        img[13][7] = '\\';
+        img[13][9] = '\'';
+        img[13][10] = '.';
+        img[13][18] = '.';
+        img[13][19] = '\'';
+        img[13][21] = '/';
+        img[14][8] = '\\';
+        img[14][11] = '\'';
+        img[14][12] = '\'';
+        img[14][13] = '-';
+        img[14][14] = '-';
+        img[14][15] = '-';
+        img[14][16] = '\'';
+        img[14][17] = '\'';
+        img[14][20] = '/';
+        img[15][7] = '.';
+        img[15][8] = '\'';
+        img[15][9] = '_';
+        img[15][10] = '_';
+        img[15][11] = '_';
+        img[15][12] = '_';
+        img[15][13] = '/';
+        img[15][14] = '-';
+        img[15][15] = '\\';
+        img[15][16] = '_';
+        img[15][17] = '_';
+        img[15][18] = '_';
+        img[15][19] = '_';
+        img[15][20] = '\'';
+        img[15][21] = '.';
+        img[15][25] = 'C';
+        img[15][26] = 'K';
+        return img;
+    }
+
 
      static char[][] printHeartCanvas() {
         char heart [][] = new char[heart_height][heart_width];
